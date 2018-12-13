@@ -6,8 +6,17 @@
 
 elda --->
 	cn_lxm,
-	(sem : ( restr : (a_ [elf-_] ) )).
+	(syn: (head: agr: gnd: neut),
+	 sem : ( restr : (a_ [elf-_] ) )).
 
 elen --->
 	cn_lxm,
 	(sem: ( restr: (a_ [star-_] ) )).
+
+% ==================================================
+% Determiners 
+% ==================================================
+
+i --->
+	(dt_lxm,
+		sem: store: (a_ [ the-[_, _ & _] ] )).
