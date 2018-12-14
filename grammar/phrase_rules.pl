@@ -37,8 +37,8 @@ r_head_mod_struc rule
 (phrase,(syn: X))
 ===>
 cat> (syn_sign, syn:(val : (spr: [ ], 
-                                         comps : [ ],
-                                         mod : (right, sign : Y)))),
+                            comps : [ ],
+                            mod : (right, sign : Y)))),
 cat> (Y, syn : X). 
 
 % ==== Leftward HEAD MOD RULE ====
@@ -48,8 +48,8 @@ l_head_mod_struc rule
 ===>
 cat> (Y, syn : X),
 cat> (syn_sign, syn:(val : (spr: [ ], 
-					comps : [ ],
-					mod : (left, sign : Y)))).
+			    comps : [ ],
+			    mod : (left, sign : Y)))).
 
 
 

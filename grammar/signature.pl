@@ -8,21 +8,22 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
         syn_sign sub [phrase, word].
         lex_sign sub [word, lexeme]. 
               lexeme sub [infl_lxm, const_lxm].
-                      infl_lxm sub [cn_lxm, v_lxm].
-                                 v_lxm sub [intr_v_lxm, trans_v_lxm, ditrans_v_lxm, sent_v_lxm].
+                      infl_lxm sub [cn_lxm, v_lxm, adj_lxm].
+                                 v_lxm sub [intr_v_lxm, trans_v_lxm].
+                                    intr_v_lxm sub [ia_v_lxm, ip_v_lxm].
+                                    trans_v_lxm sub [ta_v_lxm, tp_v_lxm].
                                  cn_lxm sub [sing_n_lxm, plur_n_lxm].
                                        sing_n_lxm sub [count_sing_n_lxm, mass_sing_n_lxm].
                                                           count_sing_n_lxm sub [simple_sn_lxm, clausal_n_lxm, rel_sn_lxm, der_n_lxm].
-                      const_lxm sub [pn_lxm, pron_lxm, dt_lxm, prep_lxm, adv_lxm, adj_lxm, compl_lxm].
+                      const_lxm sub [pn_lxm, pron_lxm, dt_lxm, prep_lxm, adv_lxm, compl_lxm].
                       prep_lxm sub [mod_prep_lxm, marking_prep_lxm].
-                      adj_lxm sub [simple_adj_lxm, rel_adj_lxm].
   syn sub [] 
       intro [val : valence,
                head: pos].
   pos sub [adj, adv, prep, verbal, agr_pos].        
       prep sub []
                intro [pform : pform].
-      agr_pos sub [det, verb, noun]
+      agr_pos sub [det, verb, noun, adj]
                     intro [agr : agr].
             det sub []
                    intro [count : bool].
@@ -32,8 +33,8 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                     intro [ic : bool]. 
    agr sub []
          intro [num : num,
-                  per : per,
-                  gnd : gnd].
+                per : per,
+                gnd : gnd].
   num sub [sg, pl, ppl, dl].
   per sub [fst, snd, trd].
   gnd sub [fem, mas, neut].

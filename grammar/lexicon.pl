@@ -57,3 +57,47 @@ valie --->
 i --->
 	(dt_lxm,
 		sem: store: (a_ [ the-[_, _ & _] ] )).
+
+% ==================================================
+% Adjectives
+% ==================================================
+
+% ==================== Simple ======================
+
+carne --->
+	(adj_lxm,
+	 sem: restr: (a_ [red-_] )).
+
+firin --->
+	(adj_lxm,
+	 sem: restr: (a_ [dead-_] )).
+
+laara --->
+	(adj_lxm,
+	 sem: restr: (a_ [flat-_] )).
+
+melin --->
+	(adj_lxm,
+	 sem: restr: (a_ [dear-_] )).
+
+more --->
+	(adj_lxm,
+	 sem: restr: (a_ [black-_] )).
+
+ninque --->
+	(adj_lxm,
+	 sem: restr: (a_ [white-_] )).
+
+vanya --->
+	(adj_lxm,
+	 sem: restr: (a_ [beautiful-_] )).
+
+% ==================================================
+% Verbs
+% ==================================================
+
+% Intransitive
+
+sil --->
+	(ip_v_lxm,
+	 sem: restr: (a_ [  _-[_,shine-_]] )).
