@@ -34,14 +34,14 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
          intro [num : num,
                   per : per,
                   gnd : gnd].
-  num sub [sg, pl].
+  num sub [sg, pl, ppl, dl].
   per sub [fst, snd, trd].
-  gnd sub [fem,mas,neut].
+  gnd sub [fem, mas, neut].
   case sub [acc, nom].
   valence sub [] 
-               intro [spr :list,
-                       comps: list,
-                       mod : mod].
+               intro [spr: list,
+                      comps: list,
+                      mod: mod].
          mod sub [none, mod_sign].
                   mod_sign sub [left, right]
                                   intro [sign : syn_sign].
