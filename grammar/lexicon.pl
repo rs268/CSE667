@@ -99,5 +99,11 @@ vanya --->
 % Intransitive
 
 sil --->
-	(ip_v_lxm,
+	(iw_v_lxm,
 	 sem: restr: (a_ [  _-[_,shine-_]] )).
+
+% Transitive
+
+henta --->
+	(ts_v_lxm,
+	 sem: restr: (a_ [ _-[_,eye-_]] )).

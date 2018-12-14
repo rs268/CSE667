@@ -9,9 +9,11 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
         lex_sign sub [word, lexeme]. 
               lexeme sub [infl_lxm, const_lxm].
                       infl_lxm sub [cn_lxm, v_lxm, adj_lxm].
-                                 v_lxm sub [intr_v_lxm, trans_v_lxm].
-                                    intr_v_lxm sub [ia_v_lxm, ip_v_lxm].
-                                    trans_v_lxm sub [ta_v_lxm, tp_v_lxm].
+                                 v_lxm sub [intr_v_lxm, trans_v_lxm, strong_v_lxm, weak_v_lxm].
+                                    intr_v_lxm sub [is_v_lxm, iw_v_lxm].
+                                    trans_v_lxm sub [ts_v_lxm, tw_v_lxm].
+                                    strong_v_lxm sub [is_v_lxm, ts_v_lxm].
+                                    weak_v_lxm sub [iw_v_lxm, tw_v_lxm].
                                  cn_lxm sub [sing_n_lxm, plur_n_lxm].
                                        sing_n_lxm sub [count_sing_n_lxm, mass_sing_n_lxm].
                                                           count_sing_n_lxm sub [simple_sn_lxm, clausal_n_lxm, rel_sn_lxm, der_n_lxm].

@@ -91,11 +91,24 @@ plur_adj lex_rule
 % Verbal rules
 %===================================================
 
+% Weak Verbs
+
 % Present tense lexical rule
-present_v lex_rule
-   (v_lxm, (syn: S,
-            sem: M))
+present_wv lex_rule
+   (weak_v_lxm, (syn: S,
+                 sem: M))
    **> (word, (syn: S,
                sem: M))
    morphs
    sil becomes siila.
+
+% Strong Verbs
+
+% Present tense lexical rule
+present_sv lex_rule
+   (strong_v_lxm, (syn: S,
+                   sem: M))
+   **> (word, (syn: S,
+               sem: M))
+   morphs
+   (X, a) becomes (X, ea).
