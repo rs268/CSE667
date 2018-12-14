@@ -4,6 +4,8 @@
 
 %  ================= Noun Lexemes ==================
 
+%  =========== Count Singular Simple Noun ==========
+
 % atan -->
 % 	cn_lxm,
 % 	(syn: (head: agr: gnd: neut),
