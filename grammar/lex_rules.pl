@@ -112,3 +112,57 @@ present_sv lex_rule
                sem: M))
    morphs
    (X, a) becomes (X, ea).
+
+% Past tense lexical rule
+past_v lex_rule
+    (v_lxm, (syn: S,
+             sem: M))
+    **> (word, (syn: S,
+                sem: M))
+    morphs
+    (X, r) becomes (X, rne),
+    (X, m) becomes (X, mne),
+    (X, n) becomes (X, nne),
+    (X, p) becomes (X, mpe),
+    (X, l) becomes (X, lle),
+    (X, Y) becomes (X, n, Y, e) when consonant(Y).
+    (X) becomes (X, e).
+
+% Future tense lexical rule
+future_v lex_rule
+    (v_lxm, (syn: S,
+             sem: M))
+    **> (word, (syn: S,
+                sem: M))
+    morphs
+    (X, a) becomes (X, uva),
+    (X) becomes (X, uva).
+
+% Aorist tense lexical rule
+aorist_sv lex_rule
+    (strong_v_lxm, (syn: S,
+                    sem: M))
+    **> (word, (syn: S,
+                sem: M))
+    morphs
+    X becomes X.
+
+aorist_wv lex_rule
+    (weak_v_lxm, (syn: S,
+                  sem: M))
+    **> (word, (syn: S,
+                sem: M))
+    morphs
+    (X) becomes (X, i).
+
+% Perfect tense lexical rule
+
+perfect_v lex_rule
+    (v_lxm, (syn: S,
+             sem: M))
+    **> (word, (syn: S,
+                sem: M))
+    morphs
+    (X, ya) becomes (X, ie),
+    (X, a) becomes (X, ie),
+    (X) becomes (X, ie).

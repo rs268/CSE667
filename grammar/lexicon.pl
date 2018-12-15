@@ -98,12 +98,32 @@ vanya --->
 
 % Intransitive
 
+linda --->
+	(is_v_lxm,
+	 sem: restr: (a_ [ _-[_,sing-_]] )).
+
 sil --->
 	(iw_v_lxm,
 	 sem: restr: (a_ [  _-[_,shine-_]] )).
+
+vil --->
+	(iw_v_lxm,
+	 sem: restr: (a_ [ _-[_,fly-_]] )).
 
 % Transitive
 
 henta --->
 	(ts_v_lxm,
 	 sem: restr: (a_ [ _-[_,eye-_]] )).
+
+mat --->
+	(tw_v_lxm,
+	 sem: restr: (a_ [ _-[_,eat-_]] )).
+
+tam --->
+	(tw_v_lxm,
+	 sem: restr: (a_ [ _-[_,tap-_]] )).
+
+tir --->
+	(tw_v_lxm,
+	 sem: restr: (a_ [ _-[_,watch-_]] )).
