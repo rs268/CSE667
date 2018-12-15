@@ -111,6 +111,22 @@ dplur_n lex_rule
    (X, [V]) becomes (X, [V], to) when vowel(V),
    (X) becomes (X, uo).
 
+% Accusative
+
+% Singular
+sing_acc lex_rule  
+   (cn_lxm, (syn: (head: agr: A),
+             sem: M))
+   **> (word, (syn: (head: (noun,
+                            agr: A,
+                            case: acc)),
+               sem: M))
+   morphs
+      (X,V) becomes (X, V, V) when vowel(V),
+      (X) becomes (X,a).
+
+% Plural
+
 
 % ===================================================
 % Adjectival Lexical Rules

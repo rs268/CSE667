@@ -96,6 +96,11 @@ vanya --->
 % Verbs
 % ==================================================
 
+% Strong => Derived roots that never represent a 
+% naked primitive root
+% Weak => primary verbs that represent a primitive
+% root
+
 % Intransitive
 
 linda --->
