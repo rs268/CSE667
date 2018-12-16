@@ -16,12 +16,10 @@ consonant([]).
 
 % Singular
 sing_nom lex_rule  
-   (cn_lxm, (syn: (head: agr: (gnd: G,
-                               per: P)),
+   (cn_lxm, (syn: (head: agr: gnd: G),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: sg),
                             case: nom)),
                sem: M))
@@ -30,12 +28,10 @@ sing_nom lex_rule
 
 % Plural
 plur_nom lex_rule 
-   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
-                                         per: P)),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: pl),
                             case: nom)),
                sem: M))
@@ -51,12 +47,10 @@ plur_nom lex_rule
 
 % Dual
 dplur_n lex_rule
-   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
-                                         per: P)),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: dl),
                             case: nom)),
                sem: M))
@@ -69,12 +63,10 @@ dplur_n lex_rule
 
 % Singular
 sing_gen lex_rule  
-   (cn_lxm, (syn: (head: agr: (gnd: G,
-                               per: P)),
+   (cn_lxm, (syn: (head: agr: gnd: G),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: sg),
                             case: gen),
                      val: mod: (right)),
@@ -86,12 +78,10 @@ sing_gen lex_rule
 
 % Plural
 plur_nom lex_rule 
-   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
-                                         per: P)),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: pl),
                             case: gen),
                      val: mod: (right)),
@@ -108,12 +98,10 @@ plur_nom lex_rule
 
 % Dual
 dplur_n lex_rule
-   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
-                                         per: P)),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: dl),
                             case: gen),
                      val: mod: (right)),
@@ -127,12 +115,10 @@ dplur_n lex_rule
 
 % Singular
 sing_acc lex_rule  
-   (cn_lxm, (syn: (head: agr: (gnd: G,
-                               per: P)),
+   (cn_lxm, (syn: (head: agr: gnd: G),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: sg),
                             case: acc)),
                sem: M))
@@ -141,12 +127,10 @@ sing_acc lex_rule
 
 % Plural
 plur_acc lex_rule
-   (cn_lxm, (syn: (head: agr: (gnd: G,
-                               per: P)),
+   (cn_lxm, (syn: (head: agr: gnd: G),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: pl),
                             case: acc)),
                sem: M))
@@ -162,12 +146,10 @@ plur_acc lex_rule
 
 % Dual
 dplur_acc lex_rule
-   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
-                                         per: P)),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  per: P,
                                   num: dl),
                             case: acc)),
                sem: M))
@@ -191,12 +173,10 @@ sing_adj lex_rule
 
 % Plural adjective lexical rule
 plur_adj lex_rule
-   (adj_lxm, (syn: (head: agr: (gnd: G,
-                                per: P)),
+   (adj_lxm, (syn: (head: agr: gnd: G),
               sem: M))
    **> (word, (syn: (head: (adj, agr: (gnd: G,
-                                 per: P,
-                                 num: pl))),
+                                       num: pl))),
                sem: M))
    morphs
    (X, ea) becomes (X, ie),
