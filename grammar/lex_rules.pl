@@ -207,20 +207,18 @@ plur_adj lex_rule
 % Verbal rules
 %===================================================
 
-% Weak Verbs
-
 % Present tense lexical rule
+
+% Weak Verbs
 present_wv lex_rule
    (weak_v_lxm, (syn: head: agr: A,
                  sem: M))
    **> (word, (syn: head: (verb, agr: A),
                sem: M))
    morphs
-   sil becomes siila.
+   (X, [V, C]) becomes (X, [V, V, C, a]) when (vowel(V), consonant(C)).
 
 % Strong Verbs
-
-% Present tense lexical rule
 present_sv lex_rule
    (strong_v_lxm, (syn: head: agr: A,
                    sem: M))
