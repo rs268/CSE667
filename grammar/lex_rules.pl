@@ -133,7 +133,6 @@ sing_acc lex_rule
 % ===================================================
 
 % Singular adjective lexical rule
-
 sing_adj lex_rule  
    (adj_lxm, (syn: S,
               sem: M))
@@ -143,7 +142,6 @@ sing_adj lex_rule
     X becomes X.
 
 % Plural adjective lexical rule
-
 plur_adj lex_rule
    (adj_lxm, (syn: (head: agr: (gnd: G,
                                 per: P)),
@@ -209,6 +207,7 @@ future_v lex_rule
     (X) becomes (X, uva).
 
 % Aorist tense lexical rule
+% Strong Verbs
 aorist_sv lex_rule
     (strong_v_lxm, (syn: S,
                     sem: M))
@@ -217,6 +216,7 @@ aorist_sv lex_rule
     morphs
     X becomes X.
 
+% Weak Verbs
 aorist_wv lex_rule
     (weak_v_lxm, (syn: S,
                   sem: M))
@@ -226,7 +226,6 @@ aorist_wv lex_rule
     (X) becomes (X, i).
 
 % Perfect tense lexical rule
-
 perfect_v lex_rule
     (v_lxm, (syn: S,
              sem: M))
