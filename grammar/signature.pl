@@ -6,7 +6,7 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
 	intro [syn : syn,
 	         sem : sem].
         syn_sign sub [phrase, word].
-        lex_sign sub [word, lexeme]. 
+        lex_sign sub [word, lexeme].
               lexeme sub [infl_lxm, const_lxm].
                       infl_lxm sub [cn_lxm, v_lxm, adj_lxm].
                                  v_lxm sub [intr_v_lxm, trans_v_lxm, strong_v_lxm, weak_v_lxm].
@@ -19,7 +19,7 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                                                           count_sing_n_lxm sub [simple_sn_lxm, clausal_n_lxm, rel_sn_lxm, der_n_lxm].
                       const_lxm sub [pn_lxm, pron_lxm, dt_lxm, prep_lxm, adv_lxm, compl_lxm].
                       prep_lxm sub [mod_prep_lxm, marking_prep_lxm].
-  syn sub [] 
+  syn sub []
       intro [val : valence,
                head: pos].
   pos sub [adj, adv, prep, verbal, agr_pos].        
@@ -39,7 +39,7 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
   num sub [sg, pl, ppl, dl].
   gnd sub [fem, mas, neut].
   case sub [acc, nom, gen].
-  valence sub [] 
+  valence sub []
                intro [spr: list,
                       comps: list,
                       mod: mod].
@@ -47,7 +47,7 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                   mod_sign sub [left, right]
                                   intro [sign : syn_sign].
   list sub [e_list, ne_list].
-    ne_list sub [] 
+    ne_list sub []
             intro [hd: bot, 
                       tl : list].
   bool sub [minus, plus].

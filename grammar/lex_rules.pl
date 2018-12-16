@@ -16,24 +16,28 @@ consonant([]).
 
 % Singular
 sing_nom lex_rule  
-   (cn_lxm, (syn: (head: agr: gnd: G),
+   (cn_lxm, (syn: (head: agr: gnd: G,
+                   val: V),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: sg),
-                            case: nom)),
+                            case: nom,
+                            val: V)),
                sem: M))
  morphs
     X becomes X.
 
 % Plural
 plur_nom lex_rule 
-   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G,
+                             val: V),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: pl),
-                            case: nom)),
+                            case: nom,
+                            val: V)),
                sem: M))
    morphs
    (X, le) becomes (X, ler),
@@ -115,12 +119,14 @@ dplur_n lex_rule
 
 % Singular
 sing_acc lex_rule  
-   (cn_lxm, (syn: (head: agr: gnd: G),
+   (cn_lxm, (syn: (head: agr: gnd: G,
+                   val: V),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: sg),
-                            case: acc)),
+                            case: acc,
+                            val: V)),
                sem: M))
    morphs
    X becomes X.
@@ -200,27 +206,26 @@ adj_to_n lex_rule
 
 % Weak Verbs
 present_wv lex_rule
-   (weak_v_lxm, (syn: head: agr: A,
+   (weak_v_lxm, (syn: head: agr: gnd: G,
                  sem: M))
-   **> (word, (syn: head: (verb, agr: A),
+   **> (word, (syn: (head: (verb, agr: (num: sg,
+                                        gnd: G))),
                sem: M))
    morphs
    (X, [V, C]) becomes (X, [V, V, C, a]) when (vowel(V), consonant(C)).
 
 % Strong Verbs
 present_sv lex_rule
-   (strong_v_lxm, (syn: head: agr: A,
-                   sem: M))
-   **> (word, (syn: head: (verb, agr: A),
+   (strong_v_lxm, (sem: M))
+   **> (word, (syn: head: (verb, agr: num: sg),
                sem: M))
    morphs
    (X, a) becomes (X, ea).
 
 % Past tense lexical rule
 past_v lex_rule
-    (v_lxm, (syn: head: agr: A,
-             sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    (v_lxm, (sem: M))
+    **> (word, (syn: head: (verb, agr: num: sg),
                 sem: M))
     morphs
     (X, r) becomes (X, rne),
@@ -233,9 +238,8 @@ past_v lex_rule
 
 % Future tense lexical rule
 future_v lex_rule
-    (v_lxm, (syn: head: agr: A,
-             sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    (v_lxm, (sem: M))
+    **> (word, (syn: head: (verb, agr: num: sg),
                 sem: M))
     morphs
     (X, a) becomes (X, uva),
@@ -244,27 +248,24 @@ future_v lex_rule
 % Aorist tense lexical rule
 % Strong Verbs
 aorist_sv lex_rule
-    (strong_v_lxm, (syn: head: agr: A,
-                    sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    (strong_v_lxm, (sem: M))
+    **> (word, (syn: head: (verb, agr: num: sg),
                 sem: M))
     morphs
     X becomes X.
 
 % Weak Verbs
 aorist_wv lex_rule
-    (weak_v_lxm, (syn: head: agr: A,
-                  sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    (weak_v_lxm, (sem: M))
+    **> (word, (syn: head: (verb, agr: num: sg),
                 sem: M))
     morphs
     (X) becomes (X, i).
 
 % Perfect tense lexical rule
 perfect_v lex_rule
-    (v_lxm, (syn: head: agr: A,
-             sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    (v_lxm, (sem: M))
+    **> (word, (syn: head: (verb, agr: num: sg),
                 sem: M))
     morphs
     (X, ya) becomes (X, ie),
@@ -273,9 +274,9 @@ perfect_v lex_rule
 
 % Verb pluralization
 plur_v lex_rule
-    (word, (syn: head: (verb, agr: A),
+    (word, (syn: head: (verb, agr: num: sg),
             sem: M))
-    **> (word, (syn: head: (verb, agr: A),
+    **> (word, (syn: head: (verb, agr: num: pl),
                 sem: M))
     morphs
     (X) becomes (X, r).

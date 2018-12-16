@@ -1,9 +1,15 @@
 % Type constraints
 % ========================================================
 
+cn_lxm cons (syn: (head: noun,
+                   val: (spr: [ ],
+                         mod: none)),
+             sem: (store: (a_ [ ]),
+                   top: (a_ [ ]))).
+
 % "Singulare tantum" nouns are singular (e.g. cat, dog, house, gold, fun, etc.)
 
-sing_n_lxm cons (syn:(head: (agr : (num: sg)))).
+sing_n_lxm cons (syn: (head: (agr: (num: sg)))).
 
 % Simple count nouns take no complements or semantic arguments
 
@@ -25,6 +31,12 @@ adj_lxm cons (syn: (val: (comps: [  ],
 % ========================================================
 % Verbal constraints
 % ========================================================
+
+% Verbal lexemes select a nominative NP specifier and agree with it.***********
+%
+v_lxm cons (syn: (head: (verb, agr: X),
+                  val:    (spr: [  @np(X,nom)  ],
+                           mod: none ) )).
 
 % Intransitive verbal lexemes require no complements.
 %
