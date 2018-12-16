@@ -69,7 +69,8 @@ sing_gen lex_rule
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: A,
-                            case: gen)),
+                            case: gen),
+                     val: mod: (right)),
                sem: M))
  morphs
     (X,a) becomes (X,o),
@@ -84,7 +85,8 @@ plur_nom lex_rule
                             agr: (gnd: G,
                                   per: P,
                                   num: pl),
-                            case: gen)),
+                            case: gen),
+                     val: mod: (right)),
                sem: M))
    morphs
    (X, le) becomes (X, leron),
@@ -104,7 +106,8 @@ dplur_n lex_rule
                             agr: (gnd: G,
                                   per: P,
                                   num: dl),
-                            case: gen)),
+                            case: gen),
+                     val: mod: (right)),
                sem: M))
    morphs
    (X, [D, V]) becomes (X, [D], uo) when dental_stop(D),
@@ -134,9 +137,9 @@ sing_acc lex_rule
 
 % Singular adjective lexical rule
 sing_adj lex_rule  
-   (adj_lxm, (syn: S,
+   (adj_lxm, (syn: head: agr: A,
               sem: M))
-   **> (word, (syn: S,
+   **> (word, (syn: head: (adj, agr: A),
                sem: M))
  morphs
     X becomes X.
@@ -163,9 +166,9 @@ plur_adj lex_rule
 
 % Present tense lexical rule
 present_wv lex_rule
-   (weak_v_lxm, (syn: S,
+   (weak_v_lxm, (syn: head: agr: A,
                  sem: M))
-   **> (word, (syn: S,
+   **> (word, (syn: head: (verb, agr: A),
                sem: M))
    morphs
    sil becomes siila.
@@ -174,18 +177,18 @@ present_wv lex_rule
 
 % Present tense lexical rule
 present_sv lex_rule
-   (strong_v_lxm, (syn: S,
+   (strong_v_lxm, (syn: head: agr: A,
                    sem: M))
-   **> (word, (syn: S,
+   **> (word, (syn: head: (verb, agr: A),
                sem: M))
    morphs
    (X, a) becomes (X, ea).
 
 % Past tense lexical rule
 past_v lex_rule
-    (v_lxm, (syn: S,
+    (v_lxm, (syn: head: agr: A,
              sem: M))
-    **> (word, (syn: S,
+    **> (word, (syn: head: (verb, agr: A),
                 sem: M))
     morphs
     (X, r) becomes (X, rne),
@@ -198,9 +201,9 @@ past_v lex_rule
 
 % Future tense lexical rule
 future_v lex_rule
-    (v_lxm, (syn: S,
+    (v_lxm, (syn: head: agr: A,
              sem: M))
-    **> (word, (syn: S,
+    **> (word, (syn: head: (verb, agr: A),
                 sem: M))
     morphs
     (X, a) becomes (X, uva),
@@ -209,27 +212,27 @@ future_v lex_rule
 % Aorist tense lexical rule
 % Strong Verbs
 aorist_sv lex_rule
-    (strong_v_lxm, (syn: S,
+    (strong_v_lxm, (syn: head: agr: A,
                     sem: M))
-    **> (word, (syn: S,
+    **> (word, (syn: head: (verb, agr: A),
                 sem: M))
     morphs
     X becomes X.
 
 % Weak Verbs
 aorist_wv lex_rule
-    (weak_v_lxm, (syn: S,
+    (weak_v_lxm, (syn: head: agr: A,
                   sem: M))
-    **> (word, (syn: S,
+    **> (word, (syn: head: (verb, agr: A),
                 sem: M))
     morphs
     (X) becomes (X, i).
 
 % Perfect tense lexical rule
 perfect_v lex_rule
-    (v_lxm, (syn: S,
+    (v_lxm, (syn: head: agr: A,
              sem: M))
-    **> (word, (syn: S,
+    **> (word, (syn: head: (verb, agr: A),
                 sem: M))
     morphs
     (X, ya) becomes (X, ie),
