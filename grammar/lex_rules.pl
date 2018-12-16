@@ -16,10 +16,13 @@ consonant([]).
 
 % Singular
 sing_nom lex_rule  
-   (cn_lxm, (syn: (head: agr: A),
+   (cn_lxm, (syn: (head: agr: (gnd: G,
+                               per: P)),
              sem: M))
    **> (word, (syn: (head: (noun,
-                            agr: A,
+                            agr: (gnd: G,
+                                  per: P,
+                                  num: sg),
                             case: nom)),
                sem: M))
  morphs
@@ -43,6 +46,7 @@ plur_nom lex_rule
    (X, o) becomes (X, or),
    (X, u) becomes (X, ur),
    (X, i) becomes (X, ir),
+   (X, e) becomes (X, i),
    (X) becomes (X, i).
 
 % Dual
@@ -65,15 +69,19 @@ dplur_n lex_rule
 
 % Singular
 sing_gen lex_rule  
-   (cn_lxm, (syn: (head: agr: A),
+   (cn_lxm, (syn: (head: agr: (gnd: G,
+                               per: P)),
              sem: M))
    **> (word, (syn: (head: (noun,
-                            agr: A,
+                            agr: (gnd: G,
+                                  per: P,
+                                  num: sg),
                             case: gen),
                      val: mod: (right)),
                sem: M))
  morphs
     (X,a) becomes (X,o),
+    (X,o) becomes (X,o),
     (X) becomes (X,o).
 
 % Plural
@@ -95,6 +103,7 @@ plur_nom lex_rule
    (X, o) becomes (X, oron),
    (X, u) becomes (X, uron),
    (X, i) becomes (X, iron),
+   (X, e) becomes (X, ion),
    (X) becomes (X, ion).
 
 % Dual
@@ -118,18 +127,54 @@ dplur_n lex_rule
 
 % Singular
 sing_acc lex_rule  
-   (cn_lxm, (syn: (head: agr: A),
+   (cn_lxm, (syn: (head: agr: (gnd: G,
+                               per: P)),
              sem: M))
    **> (word, (syn: (head: (noun,
-                            agr: A,
+                            agr: (gnd: G,
+                                  per: P,
+                                  num: sg),
                             case: acc)),
                sem: M))
    morphs
-      (X,V) becomes (X, V, V) when vowel(V),
-      (X) becomes (X,a).
+   X becomes X.
 
 % Plural
+plur_acc lex_rule
+   (cn_lxm, (syn: (head: agr: (gnd: G,
+                               per: P)),
+             sem: M))
+   **> (word, (syn: (head: (noun,
+                            agr: (gnd: G,
+                                  per: P,
+                                  num: pl),
+                            case: acc)),
+               sem: M))
+   morphs
+   (X, le) becomes (X, ler),
+   (X, ie) becomes (X, ier),
+   (X, a) becomes (X, ar),
+   (X, o) becomes (X, or),
+   (X, u) becomes (X, ur),
+   (X, i) becomes (X, ir),
+   (X, e) becomes (X, i),
+   (X) becomes (X, i).
 
+% Dual
+dplur_acc lex_rule
+   (count_sing_n_lxm, (syn: (head: agr: (gnd: G,
+                                         per: P)),
+                       sem: M))
+   **> (word, (syn: (head: (noun,
+                            agr: (gnd: G,
+                                  per: P,
+                                  num: dl),
+                            case: acc)),
+               sem: M))
+   morphs
+   (X, [D, V]) becomes (X, [D], u) when dental_stop(D),
+   (X, [V]) becomes (X, [V], t) when vowel(V),
+   (X) becomes (X, u).
 
 % ===================================================
 % Adjectival Lexical Rules

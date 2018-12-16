@@ -16,6 +16,7 @@
 % 	 sem: ( restr: (a_ [man-_] ) )).
 
 aiwe --->
+	simple_sn_lxm,
 	(syn: head: agr: gnd: neut,
 	 sem: restr: (a_ [bird-_])).
 
