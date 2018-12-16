@@ -203,6 +203,15 @@ plur_adj lex_rule
    (X, a) becomes (X, e),
    (X) becomes (X, i).
 
+% Adjective to Noun lexical rule
+adj_to_n lex_rule
+   (adj_lxm, (syn: S,
+              sem: M))
+   **> (cn_lxm, (syn: S,
+                 sem: M))
+   morphs
+   X becomes X.
+
 %===================================================
 % Verbal rules
 %===================================================
