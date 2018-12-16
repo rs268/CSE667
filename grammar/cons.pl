@@ -1,25 +1,15 @@
 % Type constraints
 % ========================================================
 
-% All common nouns are nominal and third person.
-
-% cn_lxm cons (syn : (head: (noun, 
-%                            agr : (per : trd)),
-%                            mod : none ),
-%              sem: (store: (a_ [ ]),
-%                    top: (a_ [ ]) ) ).
-
-cn_lxm cons (syn: (head: (noun, agr: (per: trd)))).
-
 % "Singulare tantum" nouns are singular (e.g. cat, dog, house, gold, fun, etc.)
 
 sing_n_lxm cons (syn:(head: (agr : (num: sg)))).
 
 % Simple count nouns take no complements or semantic arguments
 
-simple_sn_lxm cons (syn: (val : (comps : [  ] )),
-                    sem : (index : (a_ X),
-                           restr : (a_ [_-[X]]))).
+simple_sn_lxm cons (syn: (val: (comps: [  ] )),
+                    sem: (index: (a_ X),
+                           restr: (a_ [_-[X]]))).
 
 % ========================================================
 % Adjectival constraints
@@ -28,9 +18,9 @@ simple_sn_lxm cons (syn: (val : (comps : [  ] )),
 
 % All simple adjectives have empty comps and modify rightwards for now
 %
-adj_lxm cons (syn: (val: (comps : [  ],
-                          mod : (right))),
-              sem : (restr : (a_ [ _-[_,_] ] ))).
+adj_lxm cons (syn: (val: (comps: [  ],
+                          mod: (right))),
+              sem: (restr: (a_ [ _-[_,_] ] ))).
 
 % ========================================================
 % Verbal constraints
@@ -38,5 +28,5 @@ adj_lxm cons (syn: (val: (comps : [  ],
 
 % Intransitive verbal lexemes require no complements.
 %
-intr_v_lxm cons (syn:(val : (comps : [   ] ) ),
-                            sem : restr : (a_ [ _-[_,_-[_,_]]]  )).
+intr_v_lxm cons (syn: (val : (comps: [   ] ) ),
+                            sem: restr: (a_ [ _-[_,_-[_,_]]]  )).

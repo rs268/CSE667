@@ -32,13 +32,11 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
              noun sub []
                    intro [case : case]. 
        verbal sub [verb, compl]
-                    intro [ic : bool]. 
+                    intro [ic : bool].
    agr sub []
          intro [num : num,
-                per : per,
                 gnd : gnd].
   num sub [sg, pl, ppl, dl].
-  per sub [fst, snd, trd].
   gnd sub [fem, mas, neut].
   case sub [acc, nom, gen].
   valence sub [] 

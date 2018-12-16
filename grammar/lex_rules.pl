@@ -249,7 +249,7 @@ past_v lex_rule
     (X, p) becomes (X, mpe),
     (X, l) becomes (X, lle),
     (X, Y) becomes (X, n, Y, e) when consonant(Y).
-    (X) becomes (X, e).
+    (X) becomes (X, ne).
 
 % Future tense lexical rule
 future_v lex_rule
@@ -290,3 +290,12 @@ perfect_v lex_rule
     (X, ya) becomes (X, ie),
     (X, a) becomes (X, ie),
     (X) becomes (X, ie).
+
+% Verb pluralization
+plur_v lex_rule
+    (word, (syn: head: (verb, agr: A),
+            sem: M))
+    **> (word, (syn: head: (verb, agr: A),
+                sem: M))
+    morphs
+    (X) becomes (X, r).
