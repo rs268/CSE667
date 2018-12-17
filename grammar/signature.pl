@@ -36,7 +36,7 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                 gnd: gnd].
   num sub [sg, pl, ppl, dl].
   gnd sub [fem, mas, neut].
-  case sub [acc, nom, gen].
+  case sub [acc, nom, gen, poss, dat].
   valence sub []
                intro [spr: list,
                       comps: list,

@@ -50,6 +50,11 @@ elda --->
 	(syn: (head: agr: gnd: neut),
 	 sem : ( restr: (a_ [elf-_] ) )).
 
+eldalie --->
+	simple_sn_lxm,
+	(syn: (head: agr: gnd: neut),
+	 sem: restr: (a_ [elvenpeople-_] )).
+
 elen --->
 	simple_sn_lxm,
 	(syn: (head: agr: gnd: neut),

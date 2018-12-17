@@ -11,15 +11,21 @@
 % ------------------------------------------------------------------------------
 s(g,1,[i,alda,lantea]). % The tree falls (is falling).
 s(g,2,[i,eldar,cendar,parmar]). % The elves read books (habitually).
-s(g,3,[i,eldar,melir,i,calime,aldar]). % The elves love the bright trees (timelessly).
-s(g,4,[i,elen,eldaron,calyuva,i,vanya,vende]). % The star of the elves will illuminate the beautiful maiden.
+s(g,3,[i,aiwe,mante,hendi]). % The bird ate eyes.
+% s(g,3,[i,eldar,melir,i,calime,aldar]). % The elves love the bright trees (timelessly).
+s(g,4,[i,vendeo,ohtar,fiira]). % The maiden warrior dies.
+% s(g,5,[i,eldalieva,elen,calyuva,i,vanya,vende]). % The star of the elves will illuminate the beautiful maiden.
+s(u,5,[i,naucor,eleerier,i,mooli]). % The dwarves have released the slaves.
 
 % Ungrammatical test set
 % ------------------------------------------------------------------------------
 s(u,1,[i,aldar,lantea]).
 s(u,2,[i,alda,lantear]).
-s(u,3,[i,eldar,melir,i,calima,aldar]).
-s(u,4,[i,elen,elda,calyuva,i,vanya,vende]).
+s(u,3,[i,aiwe,mate,hendi]).
+% s(u,3,[i,eldar,melir,i,calima,aldar]).
+s(u,4,[i,vende,ohtar,fiira]).
+% s(u,5,[i,eldalieva,elen,calyuva,i,vanya,vende]).
+s(u,5,[i,naucor,elerier,i,mooli]).
 
 s(_,0,stop).
 

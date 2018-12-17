@@ -45,7 +45,7 @@ simple_adj_lxm cons (syn: (val: (comps : [  ],
 % Verbal constraints
 % ========================================================
 
-% Verbal lexemes select a nominative NP specifier and agree with it.***********
+% Verbal lexemes select a nominative NP specifier and agree with it.
 %
 v_lxm cons (syn: (head: (verb, agr: A),
                   val: (spr: [  @np(A,(a_ X),nom)  ],

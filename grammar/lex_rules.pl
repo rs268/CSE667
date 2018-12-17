@@ -175,6 +175,59 @@ dplur_acc lex_rule
    (X, [V]) becomes (X, [V], t) when vowel(V),
    (X) becomes (X, u).
 
+% Possessive
+
+% Singular
+sing_poss lex_rule
+   (cn_lxm, (syn: (head: agr: gnd: G,
+                   val: (spr: S,
+                         comps: C)),
+            sem: M))
+   **> (word, (syn: (head: (noun,
+                           agr: (gnd: G,
+                                 num: sg),
+                           case: poss),
+                     val: (spr: S,
+                           comps: C,
+                           mod: (right; left))),
+               sem: M))
+   morphs
+   (X, [V]) becomes (X, [V], va) when vowel(V),
+   (X, [C]) becomes (X, [C], wa) when consonant(C).
+
+% Plural
+plur_poss lex_rule
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G,
+                           val: (spr: S,
+                                 comps: C)),
+                     sem: M))
+   **> (word, (syn: (head: (noun,
+                           agr: (gnd: G,
+                                 num: pl),
+                           case: poss),
+                     val: (spr: S,
+                           comps: C,
+                           mod: (right ; left))),
+               sem: M))
+   morphs
+   X becomes (X, iva).
+
+% Dative
+
+% Singular
+   % (cn_lxm, (syn: (head: agr: gnd: G,
+   %                 val: E),
+   %           sem: M))
+   % **> (word, (syn: (head: (noun,
+   %                          agr: (gnd: G,
+   %                                num: sg),
+   %                          case: dat),
+   %                   val: E),
+   % sem: M))
+   % morphs
+   % (X, [V]) becomes (X, [V], n) when vowel(V),
+   % (X, [C]) becomes (X, [C], en) when consonant(C).
+
 % ===================================================
 % Adjectival Lexical Rules
 % ===================================================
