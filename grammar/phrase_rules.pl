@@ -18,17 +18,17 @@ cat> (syn_sign, syn:(head: Y,
 
 % ==== HEAD COMPS RULE ====
 
-% head_comps_struc rule
-% (phrase,(syn:(head : Z, 
-%                     val : (spr: X, 
-%                              comps:[],
-%                              mod : M))))
-% ===>
-% cat> (word, syn:(head : Z,
-%                  val : (spr: X, 
-%                          comps: (Y,ne_list),
-%                          mod : M ))),
-% cats> (Y). 
+head_comps_struc rule
+(phrase, (syn: (head: Z, 
+                val: (spr: X, 
+                      comps: [],
+                      mod: M))))
+===>
+cat> (word, syn: (head: Z,
+                  val: (spr: X, 
+                        comps: (Y, ne_list),
+                        mod: M))),
+cats> (Y). 
 
 
 % % ==== Rightward HEAD MOD RULE ====

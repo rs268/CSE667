@@ -15,7 +15,7 @@ consonant([]).
 % Nominative Case
 
 % Singular
-sing_nom lex_rule  
+sing_nom lex_rule
    (cn_lxm, (syn: S,
              sem: M))
    **> (word, (syn: (S, head: (noun,

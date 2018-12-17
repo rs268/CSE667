@@ -44,6 +44,11 @@ v_lxm cons (syn: (head: (verb, agr: A),
                   top: (a_ []),
                   store: (a_ []))).
 
+% Transitive verbal lexemes require one accusative NP complement.
+%
+trans_v_lxm cons (syn: (val: (comps: [  @np(_,(a_ V),acc)  ] )),
+                              sem : (restr : (a_ [ _-[_,_-[_,_,V]]] ))).
+
 % Intransitive verbal lexemes require no complements.
 %
 intr_v_lxm cons (syn: (val: (comps: [ ] )),

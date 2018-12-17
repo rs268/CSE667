@@ -9,11 +9,13 @@
 
 % Grammatical test set 
 % ------------------------------------------------------------------------------
-
+s(g,1,[i,alda,lantea]). % The tree falls (is falling).
+s(g,2,[i,eldar,cendar,parmar]). % The elves read books (habitually).
 
 % Ungrammatical test set
 % ------------------------------------------------------------------------------
-
+s(u,1,[i,aldar,lantea]).
+s(u,2,[i,alda,lantear]).
 
 s(_,0,stop).
 
