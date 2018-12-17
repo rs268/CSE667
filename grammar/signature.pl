@@ -3,8 +3,8 @@
 
 bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, mod, sem, sem_obj, restr].
   sign sub [syn_sign, lex_sign]
-	intro [syn : syn,
-	         sem : sem].
+	intro [syn: syn,
+	         sem: sem].
         syn_sign sub [phrase, word].
         lex_sign sub [word, lexeme].
               lexeme sub [infl_lxm, const_lxm].
@@ -22,20 +22,18 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
   syn sub []
       intro [val: valence,
              head: pos].
-  pos sub [adj, adv, prep, verbal, agr_pos].        
+  pos sub [adj, adv, prep, verb, agr_pos].        
       prep sub []
-               intro [pform : pform].
+               intro [pform: pform].
       agr_pos sub [det, verb, noun, adj]
-                    intro [agr : agr].
+                    intro [agr: agr].
             det sub []
-                   intro [count : bool].
+                   intro [count: bool].
              noun sub []
-                   intro [case : case]. 
-       verbal sub [verb, compl]
-                    intro [ic : bool].
+                   intro [case: case].
    agr sub []
-         intro [num : num,
-                gnd : gnd].
+         intro [num: num,
+                gnd: gnd].
   num sub [sg, pl, ppl, dl].
   gnd sub [fem, mas, neut].
   case sub [acc, nom, gen].
@@ -45,15 +43,15 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                       mod: mod].
          mod sub [none, mod_sign].
                   mod_sign sub [left, right]
-                                  intro [sign : syn_sign].
+                                  intro [sign: syn_sign].
   list sub [e_list, ne_list].
     ne_list sub []
             intro [hd: bot, 
-                      tl : list].
+                   tl: list].
   bool sub [minus, plus].
   pform sub [on, of, with, into, in, from, for, into].
   sem sub []
-          intro [index : (a_ _),
-                   restr : (a_ _),
-                   store : (a_ _),
-                   top : (a_ _) ].               
+          intro [index: (a_ _),
+                   restr: (a_ _),
+                   store: (a_ _),
+                   top: (a_ _) ].               

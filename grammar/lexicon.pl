@@ -389,7 +389,7 @@ tul --->
 
 tur --->
 	(tw_v_lxm,
-	 sem: restr: (a_ [ _=[_,govern-_]] )).
+	 sem: restr: (a_ [ _-[_,govern-_]] )).
 
 tulta --->
 	(ts_v_lxm,

@@ -1,10 +1,12 @@
 % Type constraints
 % ========================================================
 
-cn_lxm cons (syn: (head: noun,
-                   val: (spr: [ ],
+cn_lxm cons (syn: (head: (noun,
+                          agr: X),
+                   val: (spr: @opt_det(X,_,Z),
                          mod: none)),
-             sem: (store: (a_ [ ]),
+             sem: (index: Z,
+                   store: (a_ [ ]),
                    top: (a_ [ ]))).
 
 % "Singulare tantum" nouns are singular (e.g. cat, dog, house, gold, fun, etc.)
@@ -15,7 +17,7 @@ sing_n_lxm cons (syn: (head: (agr: (num: sg)))).
 
 simple_sn_lxm cons (syn: (val: (comps: [  ] )),
                     sem: (index: (a_ X),
-                           restr: (a_ [_-[X]]))).
+                          restr: (a_ [_-[X]]))).
 
 % ========================================================
 % Adjectival constraints
@@ -34,11 +36,30 @@ adj_lxm cons (syn: (val: (comps: [  ],
 
 % Verbal lexemes select a nominative NP specifier and agree with it.***********
 %
-v_lxm cons (syn: (head: (verb, agr: num: N),
-                  val: (spr: [  @np(N,nom)  ],
-                        mod: none ) )).
+v_lxm cons (syn: (head: (verb, agr: A),
+                  val: (spr: [  @np(A,(a_ X),nom)  ],
+                  mod: none )) ,
+            sem: (index: (a_ E), 
+                  restr: (a_  [  exists-[E,_-[E,X|_]]]  ),
+                  top: (a_ []),
+                  store: (a_ []))).
 
 % Intransitive verbal lexemes require no complements.
 %
-intr_v_lxm cons (syn: (val : (comps: [   ] ) ),
-                            sem: restr: (a_ [ _-[_,_-[_,_]]]  )).
+intr_v_lxm cons (syn: (val: (comps: [ ] )),
+                 sem: restr: (a_ [ _-[_,_-[_,_]]]  )).
+
+% =======================================================
+% Determiner constraints
+% =======================================================
+
+% All determiners have empty valence
+%
+dt_lxm cons (syn:(head: (det),
+                  val: (spr: [ ],
+                        comps: [ ],
+                        mod: none ) ),
+             sem: (index: (a_ X),
+                   restr: (a_ [ ]),
+                   top: (a_ []),
+                   store: (a_  [_-[X,_]] ) )).
