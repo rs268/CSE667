@@ -20,8 +20,8 @@ bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, m
                       const_lxm sub [pn_lxm, pron_lxm, dt_lxm, prep_lxm, adv_lxm, compl_lxm].
                       prep_lxm sub [mod_prep_lxm, marking_prep_lxm].
   syn sub []
-      intro [val : valence,
-               head: pos].
+      intro [val: valence,
+             head: pos].
   pos sub [adj, adv, prep, verbal, agr_pos].        
       prep sub []
                intro [pform : pform].

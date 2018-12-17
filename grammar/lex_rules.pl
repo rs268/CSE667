@@ -17,13 +17,13 @@ consonant([]).
 % Singular
 sing_nom lex_rule  
    (cn_lxm, (syn: (head: agr: gnd: G,
-                   val: V),
+                   val: E),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: sg),
-                            case: nom,
-                            val: V)),
+                            case: nom),
+                     val: E),
                sem: M))
  morphs
     X becomes X.
@@ -31,13 +31,13 @@ sing_nom lex_rule
 % Plural
 plur_nom lex_rule 
    (count_sing_n_lxm, (syn: (head: agr: gnd: G,
-                             val: V),
+                             val: E),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: pl),
-                            case: nom,
-                            val: V)),
+                            case: nom),
+                     val: E),
                sem: M))
    morphs
    (X, le) becomes (X, ler),
@@ -50,13 +50,15 @@ plur_nom lex_rule
    (X) becomes (X, i).
 
 % Dual
-dplur_n lex_rule
-   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
+dplur_nom lex_rule
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G,
+                             val: E),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
-                                  num: dl),
-                            case: nom)),
+                            num: dl),
+                            case: nom),
+                     val: E),
                sem: M))
    morphs
    (X, [D, V]) becomes (X, [D], u) when dental_stop(D),
@@ -67,13 +69,17 @@ dplur_n lex_rule
 
 % Singular
 sing_gen lex_rule  
-   (cn_lxm, (syn: (head: agr: gnd: G),
+   (cn_lxm, (syn: (head: agr: gnd: G,
+                  val: (spr: S,
+                        comps: C)),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: sg),
                             case: gen),
-                     val: mod: (right)),
+                     val: (spr: S,
+                           comps: C,
+                           mod: (right))),
                sem: M))
  morphs
     (X,a) becomes (X,o),
@@ -81,14 +87,18 @@ sing_gen lex_rule
     (X) becomes (X,o).
 
 % Plural
-plur_nom lex_rule 
-   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
+plur_gen lex_rule 
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G,
+                             val: (spr: S,
+                                   comps: C)),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: pl),
                             case: gen),
-                     val: mod: (right)),
+                     val: (spr: S,
+                           comps: C,
+                           mod: (right))),
                sem: M))
    morphs
    (X, le) becomes (X, leron),
@@ -101,7 +111,7 @@ plur_nom lex_rule
    (X) becomes (X, ion).
 
 % Dual
-dplur_n lex_rule
+dplur_gen lex_rule
    (count_sing_n_lxm, (syn: (head: agr: gnd: G),
                        sem: M))
    **> (word, (syn: (head: (noun,
@@ -120,25 +130,27 @@ dplur_n lex_rule
 % Singular
 sing_acc lex_rule  
    (cn_lxm, (syn: (head: agr: gnd: G,
-                   val: V),
+                   val: E),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: sg),
-                            case: acc,
-                            val: V)),
+                            case: acc),
+                     val: E),
                sem: M))
    morphs
    X becomes X.
 
 % Plural
 plur_acc lex_rule
-   (cn_lxm, (syn: (head: agr: gnd: G),
+   (cn_lxm, (syn: (head: agr: gnd: G,
+                   val: E),
              sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: pl),
-                            case: acc)),
+                            case: acc),
+                     val: E),
                sem: M))
    morphs
    (X, le) becomes (X, ler),
@@ -152,12 +164,14 @@ plur_acc lex_rule
 
 % Dual
 dplur_acc lex_rule
-   (count_sing_n_lxm, (syn: (head: agr: gnd: G),
+   (count_sing_n_lxm, (syn: (head: agr: gnd: G,
+                             val: E),
                        sem: M))
    **> (word, (syn: (head: (noun,
                             agr: (gnd: G,
                                   num: dl),
-                            case: acc)),
+                            case: acc),
+                     val: E),
                sem: M))
    morphs
    (X, [D, V]) becomes (X, [D], u) when dental_stop(D),
@@ -206,26 +220,32 @@ adj_to_n lex_rule
 
 % Weak Verbs
 present_wv lex_rule
-   (weak_v_lxm, (syn: head: agr: gnd: G,
+   (weak_v_lxm, (syn: (head: agr: gnd: G,
+                       val: E),
                  sem: M))
    **> (word, (syn: (head: (verb, agr: (num: sg,
-                                        gnd: G))),
+                                        gnd: G)),
+                     val: E),
                sem: M))
    morphs
    (X, [V, C]) becomes (X, [V, V, C, a]) when (vowel(V), consonant(C)).
 
 % Strong Verbs
 present_sv lex_rule
-   (strong_v_lxm, (sem: M))
-   **> (word, (syn: head: (verb, agr: num: sg),
+   (strong_v_lxm, (syn: val: E,
+                   sem: M))
+   **> (word, (syn: (head: (verb, agr: num: sg),
+                     val: E),
                sem: M))
    morphs
    (X, a) becomes (X, ea).
 
 % Past tense lexical rule
 past_v lex_rule
-    (v_lxm, (sem: M))
-    **> (word, (syn: head: (verb, agr: num: sg),
+    (v_lxm, (syn: val: E,
+             sem: M))
+    **> (word, (syn: (head: (verb, agr: num: sg),
+                      val: E),
                 sem: M))
     morphs
     (X, r) becomes (X, rne),
@@ -238,8 +258,10 @@ past_v lex_rule
 
 % Future tense lexical rule
 future_v lex_rule
-    (v_lxm, (sem: M))
-    **> (word, (syn: head: (verb, agr: num: sg),
+    (v_lxm, (syn: val: E,
+             sem: M))
+    **> (word, (syn: (head: (verb, agr: num: sg),
+                      val: E),
                 sem: M))
     morphs
     (X, a) becomes (X, uva),
@@ -248,24 +270,30 @@ future_v lex_rule
 % Aorist tense lexical rule
 % Strong Verbs
 aorist_sv lex_rule
-    (strong_v_lxm, (sem: M))
-    **> (word, (syn: head: (verb, agr: num: sg),
+    (strong_v_lxm, (syn: val: E,
+                    sem: M))
+    **> (word, (syn: (head: (verb, agr: num: sg),
+                      val: E),
                 sem: M))
     morphs
     X becomes X.
 
 % Weak Verbs
 aorist_wv lex_rule
-    (weak_v_lxm, (sem: M))
-    **> (word, (syn: head: (verb, agr: num: sg),
+    (weak_v_lxm, (syn: val: E,
+                  sem: M))
+    **> (word, (syn: (head: (verb, agr: num: sg),
+                      val: E),
                 sem: M))
     morphs
     (X) becomes (X, i).
 
 % Perfect tense lexical rule
 perfect_v lex_rule
-    (v_lxm, (sem: M))
-    **> (word, (syn: head: (verb, agr: num: sg),
+    (v_lxm, (syn: val: E,
+             sem: M))
+    **> (word, (syn: (head: (verb, agr: num: sg),
+                      val: E),
                 sem: M))
     morphs
     (X, ya) becomes (X, ie),
@@ -274,9 +302,11 @@ perfect_v lex_rule
 
 % Verb pluralization
 plur_v lex_rule
-    (word, (syn: head: (verb, agr: num: sg),
+    (word, (syn: (head: (verb, agr: num: sg),
+                  val: E),
             sem: M))
-    **> (word, (syn: head: (verb, agr: num: pl),
+    **> (word, (syn: (head: (verb, agr: num: pl),
+                      val: E),
                 sem: M))
     morphs
     (X) becomes (X, r).

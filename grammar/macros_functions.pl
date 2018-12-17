@@ -1,5 +1,5 @@
-np(X,Y) macro (syn_sign, syn: (head: (noun,
-                                      agr: X,
-                                      case: Y),
+np(N,C) macro (syn_sign, syn: (head: (noun,
+                                      agr: num: N,
+                                      case: C),
                                val: (spr:  [ ],
                                      comps: [ ] ))).

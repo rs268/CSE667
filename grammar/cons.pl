@@ -34,9 +34,9 @@ adj_lxm cons (syn: (val: (comps: [  ],
 
 % Verbal lexemes select a nominative NP specifier and agree with it.***********
 %
-v_lxm cons (syn: (head: (verb, agr: X),
-                  val:    (spr: [  @np(X,nom)  ],
-                           mod: none ) )).
+v_lxm cons (syn: (head: (verb, agr: num: N),
+                  val: (spr: [  @np(N,nom)  ],
+                        mod: none ) )).
 
 % Intransitive verbal lexemes require no complements.
 %
