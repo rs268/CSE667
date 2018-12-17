@@ -285,6 +285,10 @@ fir --->
 	(iw_v_lxm,
 	 sem: restr: (a_ [ _-[_,die-_]] )).
 
+hanya --->
+	(is_v_lxm,
+	 sem: restr: (a_ [ _-[_,understand-_]] )).
+
 lala --->
 	(is_v_lxm,
 	 sem: restr: (a_ [ _-[_,laugh-_]] )).

@@ -358,6 +358,10 @@ perfect_v_sing lex_rule
     **> (word, (syn: (S, head: agr: num: sg),
                 sem: M))
     morphs
+    ([X, V, C, y, a]) becomes ([V, X, V, V, C, i, e]) when vowel(V),
+    ([X, V, C, a]) becomes ([V, X, V, V, C, i, e]) when vowel(V),
+    ([X, V, C, y, a]) becomes ([V, X, V, C, i, e]) when vowel(V),
+    ([X, V, C, a]) becomes ([V, X, V, C, i, e]) when vowel(V),
     (X, ya) becomes (X, ie),
     (X, a) becomes (X, ie),
     (X) becomes (X, ie).
@@ -369,6 +373,10 @@ perfect_v_plur lex_rule
     **> (word, (syn: (S, head: agr: num: (pl ; dl)),
                 sem: M))
     morphs
+    ([X, V, C, y, a]) becomes ([V, X, V, V, C, i, e, r]) when vowel(V),
+    ([X, V, C, a]) becomes ([V, X, V, V, C, i, e, r]) when vowel(V),
+    ([X, V, C, y, a]) becomes ([V, X, V, C, i, e, r]) when vowel(V),
+    ([X, V, C, a]) becomes ([V, X, V, C, i, e, r]) when vowel(V),
     (X, ya) becomes (X, ier),
     (X, a) becomes (X, ier),
     (X) becomes (X, ier).
