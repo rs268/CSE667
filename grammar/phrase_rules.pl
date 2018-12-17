@@ -33,23 +33,23 @@ cats> (Y).
 
 % % ==== Rightward HEAD MOD RULE ====
 
-% r_head_mod_struc rule
-% (phrase,(syn: X))
-% ===>
-% cat> (syn_sign, syn:(val : (spr: [ ], 
-%                             comps : [ ],
-%                             mod : (right, sign : Y)))),
-% cat> (Y, syn : X). 
+r_head_mod_struc rule
+(phrase,(syn: X))
+===>
+cat> (syn_sign, syn:(val : (spr: [ ], 
+                            comps : [ ],
+                            mod : (right, sign : Y)))),
+cat> (Y, syn : X).
 
 % % ==== Leftward HEAD MOD RULE ====
 
-% l_head_mod_struc rule
-% (phrase,(syn: X))
-% ===>
-% cat> (Y, syn : X),
-% cat> (syn_sign, syn:(val : (spr: [ ], 
-% 			    comps : [ ],
-% 			    mod : (left, sign : Y)))).
+l_head_mod_struc rule
+(phrase,(syn: X))
+===>
+cat> (Y, syn : X),
+cat> (syn_sign, syn:(val : (spr: [ ], 
+			    comps : [ ],
+			    mod : (left, sign : Y)))).
 
 
 

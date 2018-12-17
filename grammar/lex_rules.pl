@@ -76,7 +76,7 @@ sing_gen lex_rule
                             case: gen),
                      val: (spr: S,
                            comps: C,
-                           mod: (right))),
+                           mod: (right; left))),
                sem: M))
  morphs
     (X,a) becomes (X,o),
@@ -95,7 +95,7 @@ plur_gen lex_rule
                             case: gen),
                      val: (spr: S,
                            comps: C,
-                           mod: (right))),
+                           mod: (right ; left))),
                sem: M))
    morphs
    (X, le) becomes (X, leron),
@@ -115,7 +115,7 @@ dplur_gen lex_rule
                             agr: (gnd: G,
                                   num: dl),
                             case: gen),
-                     val: mod: (right)),
+                     val: mod: (right ; left)),
                sem: M))
    morphs
    (X, [D, V]) becomes (X, [D], uo) when dental_stop(D),

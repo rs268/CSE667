@@ -11,3 +11,9 @@ opt_det(X,Y,Z) macro ([] ; [ (syn_sign, (syn: (head: (det,
                                                       agr: X,
                                                       count: Y)),
                                          sem: (index: Z))) ]).
+
+% Nominal
+n(A) macro (syn_sign, syn: (head : (noun,
+                                    agr: A),                        
+                         val : (spr :  [ _ ],
+                                comps: [ ] ))).

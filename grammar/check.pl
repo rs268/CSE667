@@ -11,14 +11,17 @@
 % ------------------------------------------------------------------------------
 s(g,1,[i,alda,lantea]). % The tree falls (is falling).
 s(g,2,[i,eldar,cendar,parmar]). % The elves read books (habitually).
+s(g,3,[i,eldar,melir,i,calime,aldar]). % The elves love the bright trees (timelessly).
+s(g,4,[i,elen,eldaron,calyuva,i,vanya,vende]). % The star of the elves will illuminate the beautiful maiden.
 
 % Ungrammatical test set
 % ------------------------------------------------------------------------------
 s(u,1,[i,aldar,lantea]).
 s(u,2,[i,alda,lantear]).
+s(u,3,[i,eldar,melir,i,calima,aldar]).
+s(u,4,[i,elen,elda,calyuva,i,vanya,vende]).
 
 s(_,0,stop).
-
 
 % ------------------------------------------------------------------------------
 % Parse with verbose output p_v/1

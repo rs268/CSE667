@@ -24,11 +24,22 @@ simple_sn_lxm cons (syn: (val: (comps: [  ] )),
 % ========================================================
 
 
-% All simple adjectives have empty comps and modify rightwards for now
+% All adjectives have empty spr and modifiy n
 %
-adj_lxm cons (syn: (val: (comps: [  ],
-                          mod: (right))),
-              sem: (restr: (a_ [ _-[_,_] ] ))).
+adj_lxm cons (syn: (head: (adj,
+                           agr: A),
+                    val: (spr: [   ],
+                          mod: (sign: (@n(A), sem: index: (a_ X) ) ) )),
+                          sem: (index : (a_ E),
+                                top : (a_ []),
+                                restr : (a_ [ _-[E,X|_] ] ),
+                                store : (a_ [ ]))).
+
+% All simple adjectives have empty comps and modify rightwards
+%
+simple_adj_lxm cons (syn: (val: (comps : [  ],
+                                 mod : (right ; left))),
+                     sem: (restr: (a_ [ _-[_,_] ] ))).
 
 % ========================================================
 % Verbal constraints
