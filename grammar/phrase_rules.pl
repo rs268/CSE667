@@ -10,16 +10,16 @@ head_spr_struc rule
                       mod: M))))
 ===>
 cat> (X),
-cat> (syn_sign, syn:(head: Y,
-                     val: (spr: [ X ], 
-                           comps: [ ],
-                           mod: M))).
+cat> (syn_sign, syn: (head: Y,
+                      val: (spr: [ X ], 
+                            comps: [ ],
+                            mod: M))).
 
 
 % ==== HEAD COMPS RULE ====
 
 head_comps_struc rule
-(phrase, (syn: (head: Z, 
+(phrase, (syn: (head: Z,
                 val: (spr: X, 
                       comps: [],
                       mod: M))))

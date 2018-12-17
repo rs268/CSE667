@@ -4,7 +4,7 @@
 bot sub [sign, syn, pos, valence, list, agr, num, per, gnd, case, bool, pform, mod, sem, sem_obj, restr].
   sign sub [syn_sign, lex_sign]
 	intro [syn: syn,
-	         sem: sem].
+	       sem: sem].
         syn_sign sub [phrase, word].
         lex_sign sub [word, lexeme].
               lexeme sub [infl_lxm, const_lxm].

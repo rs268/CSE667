@@ -373,6 +373,32 @@ perfect_v_plur lex_rule
     (X, a) becomes (X, ier),
     (X) becomes (X, ier).
 
+% Prononminal suffix
+% add_fst_per_nom_v1 lex_rule
+%    (word, (syn: (head: (verb, agr: A),
+%                  val: (comps: C,
+%                        mod: M)),
+%            sem: M))
+%    **> (phrase, (syn: (head: (verb, agr: A),
+%                        val: (spr: [ ],
+%                              comps: C,
+%                              mod: M)),
+%                  sem: M))
+%    morphs
+%    (X) becomes (X, n).
+
+% add_fst_per_nom_v2 lex_rule
+%    (word, (syn: (head: (verb,
+%                         agr: A),
+%                  val: V),
+%            sem: M))
+%    **> (phrase, (syn: (head: (verb, agr: A),
+%                        val: (V,
+%                              spr: [  ])),
+%                  sem: M))
+%    morphs
+%    (X) becomes (X, nye).
+
 %===================================================
 % Determiner rules
 %===================================================

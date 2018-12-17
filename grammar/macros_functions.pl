@@ -17,3 +17,9 @@ n(A) macro (syn_sign, syn: (head : (noun,
                                     agr: A),                        
                          val : (spr :  [ _ ],
                                 comps: [ ] ))).
+
+% frst_psn_prn_sing macro (syn: (head: (noun, agr: num: sg),
+%                                val: (spr: [ ],
+%                                      comps: [ ],
+%                                      mod: none)),
+%                          sem : store : (a_ [ _-[_,(speaker-_) & _ ]]  )).
