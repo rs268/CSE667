@@ -15,7 +15,7 @@ s(g,3,[i,aiwe,mante,hendi]). % The bird ate eyes.
 % s(g,3,[i,eldar,melir,i,calime,aldar]). % The elves love the bright trees (timelessly).
 s(g,4,[i,vendeo,ohtar,fiira]). % The maiden warrior dies.
 % s(g,5,[i,eldalieva,elen,calyuva,i,vanya,vende]). % The star of the elves will illuminate the beautiful maiden.
-s(u,5,[i,naucor,eleerier,i,mooli]). % The dwarves have released the slaves.
+s(g,5,[i,naucor,eleerier,i,mooli]). % The dwarves have released the slaves.
 
 % Ungrammatical test set
 % ------------------------------------------------------------------------------
