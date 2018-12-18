@@ -250,6 +250,7 @@ plur_adj lex_rule
    morphs
    (X, ea) becomes (X, ie),
    (X, a) becomes (X, e),
+   (X, e) becomes (X, i),
    (X) becomes (X, i).
 
 % Adjective to Noun lexical rule
